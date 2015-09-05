@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ywh-rq-iYo">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="OkL-X3-QNM">
+            <objects>
+                <viewController id="FlN-t9-lqL" customClass="HGCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="La2-k2-01z"/>
+                        <viewControllerLayoutGuide type="bottom" id="fl0-kw-u3n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dKU-0g-R29">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello Text Google Cast" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vo3-16-GQf">
+                                <rect key="frame" x="176" y="154" width="250" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Message Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d0R-9b-6tx">
+                                <rect key="frame" x="174" y="192" width="251" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="251" id="Qay-Di-5qa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAw-nZ-S6N">
+                                <rect key="frame" x="249" y="230" width="103" height="30"/>
+                                <state key="normal" title="Update Screen">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendText:" destination="FlN-t9-lqL" eventType="touchUpInside" id="aTe-5p-na1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AAw-nZ-S6N" firstAttribute="top" secondItem="d0R-9b-6tx" secondAttribute="bottom" constant="8" id="8yS-26-LQm"/>
+                            <constraint firstAttribute="centerX" secondItem="AAw-nZ-S6N" secondAttribute="centerX" id="9Ty-nU-Vej"/>
+                            <constraint firstAttribute="centerX" secondItem="Vo3-16-GQf" secondAttribute="centerX" id="DwR-4o-sjF"/>
+                            <constraint firstAttribute="centerX" secondItem="d0R-9b-6tx" secondAttribute="centerX" id="RFh-3R-xvK"/>
+                            <constraint firstItem="d0R-9b-6tx" firstAttribute="top" secondItem="Vo3-16-GQf" secondAttribute="bottom" constant="8" id="SVJ-Xw-mQq"/>
+                            <constraint firstItem="Vo3-16-GQf" firstAttribute="top" secondItem="La2-k2-01z" secondAttribute="bottom" constant="90" id="apK-MA-6Oe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wm3-OL-KIg">
+                        <barButtonItem key="rightBarButtonItem" image="icon-cast-identified.png" id="24x-d4-OVH">
+                            <connections>
+                                <action selector="chooseDevice:" destination="FlN-t9-lqL" id="t9I-Nf-mUD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="googleCastButton" destination="24x-d4-OVH" id="g9p-nj-aFv"/>
+                        <outlet property="messageTextField" destination="d0R-9b-6tx" id="eLa-ag-FDY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ii6-UR-ofw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="210"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jHl-hC-vR6">
+            <objects>
+                <navigationController id="Ywh-rq-iYo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gAX-W5-Pxh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FlN-t9-lqL" kind="relationship" relationship="rootViewController" id="S6V-b4-uvy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTc-s0-1bp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="210"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-cast-identified.png" width="24" height="24"/>
+    </resources>
+</document>
