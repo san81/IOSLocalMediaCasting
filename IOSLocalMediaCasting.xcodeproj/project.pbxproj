@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13FB5F13E123608FD0AD1AD7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CB377A4AF1AC1766F175C1 /* libPods.a */; };
 		B46D04C91B9BA5B60020D54E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B46D04BF1B9BA5B60020D54E /* InfoPlist.strings */; };
 		B46D04CA1B9BA5B60020D54E /* HelloTextStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46D04C11B9BA5B60020D54E /* HelloTextStoryboard.storyboard */; };
 		B46D04CB1B9BA5B60020D54E /* icon-cast-connected.png in Resources */ = {isa = PBXBuildFile; fileRef = B46D04C21B9BA5B60020D54E /* icon-cast-connected.png */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21CB377A4AF1AC1766F175C1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		82A9DFFE432B1352EEB529BC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B46D04C01B9BA5B60020D54E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B46D04C11B9BA5B60020D54E /* HelloTextStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HelloTextStoryboard.storyboard; sourceTree = "<group>"; };
 		B46D04C21B9BA5B60020D54E /* icon-cast-connected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cast-connected.png"; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		B4DEAC511B941DC90061869F /* IOSLocalMediaCastingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSLocalMediaCastingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4DEAC561B941DC90061869F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4DEAC571B941DC90061869F /* IOSLocalMediaCastingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSLocalMediaCastingTests.swift; sourceTree = "<group>"; };
+		BB06E35C81DBDE8E743B71F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13FB5F13E123608FD0AD1AD7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC018AB943AD338FBBF3624E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21CB377A4AF1AC1766F175C1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B46D04BE1B9BA5B60020D54E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +108,8 @@
 				B4DEAC3E1B941DC90061869F /* IOSLocalMediaCasting */,
 				B4DEAC541B941DC90061869F /* IOSLocalMediaCastingTests */,
 				B4DEAC3D1B941DC90061869F /* Products */,
+				BA29940D2C765D7F01844D46 /* Pods */,
+				AC018AB943AD338FBBF3624E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +159,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BA29940D2C765D7F01844D46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82A9DFFE432B1352EEB529BC /* Pods.debug.xcconfig */,
+				BB06E35C81DBDE8E743B71F4 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4DEAC5B1B941DC90061869F /* Build configuration list for PBXNativeTarget "IOSLocalMediaCasting" */;
 			buildPhases = (
+				57C156B34E527ADC594F9946 /* Check Pods Manifest.lock */,
 				B4DEAC381B941DC90061869F /* Sources */,
 				B4DEAC391B941DC90061869F /* Frameworks */,
 				B4DEAC3A1B941DC90061869F /* Resources */,
+				4640031E363408EB5C1D808C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +272,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4640031E363408EB5C1D808C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57C156B34E527ADC594F9946 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B4DEAC381B941DC90061869F /* Sources */ = {
@@ -386,6 +445,7 @@
 		};
 		B4DEAC5C1B941DC90061869F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82A9DFFE432B1352EEB529BC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IOSLocalMediaCasting/Info.plist;
@@ -396,6 +456,7 @@
 		};
 		B4DEAC5D1B941DC90061869F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB06E35C81DBDE8E743B71F4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IOSLocalMediaCasting/Info.plist;
